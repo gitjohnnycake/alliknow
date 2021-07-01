@@ -1,0 +1,24 @@
+<!-- 选项卡 -->
+<view class="page-section-spacing">
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <block wx:for="{{tabData}}" wx:key="index">
+      <view class="scroll-view-item_H {{isChecked == index ? 'scrollAfter' : ''}}" bindtap="clickTab"
+        data-index="{{index}}">
+        <image class="navImage" src="{{item.img}}"></image>
+      </view>
+    </block>
+  </scroll-view>
+</view>
+
+<view class="container">
+  <ul class="contentBox">
+    <li class="item" wx:for="{{weibo}}" wx:key="index">
+      <a class="contentItem" href="{{item.url}}">
+        <view class="rank {{index == 0 ? 'one' : ''}}{{index == 1 ? 'two' : ''}}{{index == 2 ? 'three' : ''}}">
+          {{index + 1}}</view>
+        <view class="title">{{item.title}}</view>
+        <view class="info">{{item.info}}</view>
+      </a>
+    </li>
+  </ul>
+</view>

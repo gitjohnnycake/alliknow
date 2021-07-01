@@ -1,0 +1,85 @@
+/* 选项卡 */
+.page-section-spacing {
+  background: #ffffff;
+  box-shadow: 0 0 16rpx #cccccc;
+}
+
+.scroll-view_H {
+  white-space: nowrap;
+}
+
+.scroll-view-item {
+  height: 300rpx;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  width: auto;
+  margin: 0 40rpx;
+  font-size: 28rpx;
+  padding: 10rpx 0;
+  position: relative;
+}
+
+.navImage {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.scrollAfter::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4rpx;
+  background-color: #fa6016;
+  left: 0;
+  bottom: 0;
+}
+
+.contentBox {
+  padding: 40rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  margin: 16rpx 0;
+}
+
+.contentItem {
+  display: flex;
+  align-items: center;
+}
+
+.rank {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #cacaca;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 12rpx;
+}
+
+.one {
+  background: #ff5d5d;
+}
+
+.two {
+  background: #ffc038;
+}
+
+.three {
+  background: #5d88ff;
+}
+
+.title {
+  margin: 0 20rpx;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.info {
+  color: red;
+}
