@@ -12,7 +12,7 @@
 
 <view class="container">
   <ul class="contentBox">
-    <li class="item" wx:for="{{weibo}}" wx:key="index">
+    <li class="item" wx:for="{{list}}" wx:key="index" bindtap="skip" data-index="{{index}}">
       <a class="contentItem" href="{{item.url}}">
         <view class="rank {{index == 0 ? 'one' : ''}}{{index == 1 ? 'two' : ''}}{{index == 2 ? 'three' : ''}}">
           {{index + 1}}</view>

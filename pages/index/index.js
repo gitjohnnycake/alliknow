@@ -1,6 +1,5 @@
 const baseUrl = {
-  test: "http://localhost:4000",
-  online: ""
+  online: "https://api.littlefish.life/api"
 }
 Page({
   data: {
@@ -27,7 +26,7 @@ Page({
       },
     ],
     isChecked: 0,
-    weibo: []
+    list: []
   },
 
   // 点击 tab
@@ -40,16 +39,26 @@ Page({
     })
   },
 
+  skip(e) {
+    let index = e.currentTarget.dataset.index
+    wx.setClipboardData({
+      data: this.data.list[index].url,
+      success: () => {
+        wx.getClipboardData()
+      }
+    })
+  },
+
   // 加载数据
   getData(url) {
     wx.showLoading({
       title: '加载中···',
     })
     wx.request({
-      url: baseUrl.test + url,
+      url: baseUrl.online + url,
       success: res => {
         this.setData({
-          weibo: res.data.data
+          list: res.data.data
         }, () => {
           wx.hideLoading()
         })
